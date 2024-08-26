@@ -409,10 +409,215 @@ button {
 
 /* Team */
 
+.team-cards {
+    padding: 96px 0;
+    background-color: #f4f4fd;
+}
 
 
+.section-title {
+    margin-bottom: 72px;
+}
+
+.team-list {
+
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+}
+
+.list-item {
+    background-color: #FFFFFF;
+    max-width: 264px;
+    margin: 0 auto;
+    border-radius: 0px 0px 4px 4px;
+        box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    }
 
 
+.card-info {
+    margin: 0 auto;
+    padding: 32px 0;
+}
+
+.team-member {
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;
+}
+
+.position {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #434455;
+}
+
+.icons-list {
+    display: flex;
+    justify-content: center;
+    margin-left: 16px;
+    margin-top: 8px;
+    margin-right: 16px;
+    gap: 24px;
+}
 
 
-             
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4d5ae5;
+    max-width: ((100% - 3*24px) / 4);
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-media:hover,
+.social-media:focus {
+    background-color: #404bbf;
+}
+
+.card-icon {
+    fill: #f4f4fd;
+}
+
+@media screen and (min-width: 768px) {
+
+    .team-cards-containeer {
+        max-width: 552px;
+        padding: 0;
+    }
+
+    .team-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 72px;
+        }
+
+    .list-item {
+        width: calc((100% - 24px) / 2);
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    
+    .team-cards {
+        padding: 120px 0;
+    }
+    
+    .team-cards-containeer { 
+        max-width: 1158px;
+        padding: 0 15px;
+    }
+    .team-list {
+        flex-wrap: nowrap;
+    }
+
+    .list-item {
+        width: calc((100% - 24px * 3) / 4);
+    }
+}
+
+/* Portfolio */
+
+.portfolio-section {
+    padding: 96px 0;
+}
+
+.section-title {
+    margin-bottom: 72px;
+}
+
+.portfolio-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.portfolio-cards-list {
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-cards-list:hover .portfolio-overlay {
+    transform: translateY(0);
+}
+
+.portfolio-cards-list:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.img-overlay {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding: 40px 32px;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    background-color: #4d5ae5;
+}
+
+.cards-container {
+    padding: 32px 16px;
+    border: 1px solid #e7e9fc;
+    border-top: none;
+}
+
+.portfolio-list {
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+}
+
+.portfolio-list-content {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+}
+
+@media screen and (min-width: 768px) {
+    .portfolio-cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 72px;
+        column-gap: 24px;
+        }
+
+    .portfolio-cards-list {
+        width: ((100% - 24px) / 2);
+     }
+}
+
+@media screen and (min-width: 1158px) {
+    .portfolio-cards {
+            row-gap: 48px;
+        }
+}
