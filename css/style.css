@@ -227,6 +227,11 @@ button {
     background-size: cover;
 }
 
+
+@media screen and (min-resolotion: 192dpi) {
+
+}
+
 .intro-container {
     display: flex;
     justify-content: center;
@@ -621,3 +626,209 @@ button {
             row-gap: 48px;
         }
 }
+
+
+/* Footer */
+
+.footer {
+    padding: 96px 0;
+    background-color: #2e2f42;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 72px;
+}
+
+.footer-logo {
+    display: inline-block;   
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #4d5ae5;
+}
+
+.footer-logo-part {
+    font-family: "Raleway", sans-serif;
+    color: #f4f4fd;
+}
+
+.footer-text {
+    max-width: 288px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+}
+
+.footer-list-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.footer-list-title {
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+.footer-icons-list {
+    display: flex;
+    gap: 16px;
+}
+
+.social-media-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4d5ae5;
+    max-width: ((100% - 3*24px) / 4);
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-media-footer:hover,
+.social-media-footer:focus {
+    background-color: #31d0aa;
+}
+
+.footer-form-container {
+    margin-top: 72px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+
+.footer-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.footer-form-title {
+    display: block;
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;
+}
+
+.email-input {
+    padding-left: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    outline: transparent;
+    width: 288px;
+    height: 40px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: #fff;
+}
+
+.email-input::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: #fff;
+}
+
+.subscribe-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 24px;
+    min-width: 165px;
+    height: 40px;
+    background-color: #4d5ae5;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #fff;
+}
+
+.subscribe-icon {
+    margin-left: 16px;
+}
+
+ @media screen and (min-width: 768px) {
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        padding: 0 108px;
+    }
+    .footer-content {
+        max-width: 264px;
+        align-items: start;
+        gap: 16px;
+        margin-bottom: 0;
+        margin-right: 24px;
+    }
+    
+    .footer-form-container {
+        margin-top: 64px;
+        display: block;
+    }
+
+    .footer-form {
+        flex-direction: row;
+        align-items: center;
+        gap: 24px;
+    }
+    .email-input {
+        width: 264px;
+    }
+} 
+
+@media screen and (min-width: 1158px) {
+    .footer {
+            padding: 100px 0;
+    }
+    
+    .footer-container {
+        padding: 0 15px;
+    }
+
+    .footer-content {
+         margin-right: 120px;
+    }
+    .footer-list-wrap {
+        align-items: start;
+    }
+    .footer-form-container {
+    margin-left: 80px;
+    }
+}
+
