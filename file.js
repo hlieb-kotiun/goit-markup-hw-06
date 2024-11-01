@@ -31,3 +31,7 @@ const mobileMenuClose = () => {
 
 openMobileMenu.addEventListener("click", mobileMenuOpen);
 closeMobileMenu.addEventListener("click", mobileMenuClose);
+
+// const mobileNavLinks = document.querySelectorAll(".mobile-nav-list-link");
+
+// mobileNavLinks.addEventListener("click", mobileMenuClose);
