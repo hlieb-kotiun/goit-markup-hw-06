@@ -39,3 +39,29 @@ function mobileMenuCloser(event) {
 
   mobileMenu.classList.remove("is-open");
 }
+
+// * * * Modal form * * *
+
+const form = document.querySelector(".modal-form");
+
+form.addEventListener("submit", formHandler);
+
+function formHandler(event) {
+  event.preventDefault();
+  const userName = event.target.elements.username.value;
+  const userNumber = event.target.elements.usertel.value;
+  const userEmail = event.target.elements.useremail.value;
+
+  if (userName === "" || userNumber === "" || userEmail === "") {
+    return alert("Please fill all the filds!");
+  }
+  userData.name = userName;
+  userData.number = userNumber;
+  userData.userEmail = userEmail;
+
+  form.reset();
+}
+
+const userData = {};
+
+console.log(userData.name);
