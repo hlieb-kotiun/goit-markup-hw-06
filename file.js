@@ -43,25 +43,28 @@ function mobileMenuCloser(event) {
 // * * * Modal form * * *
 
 const form = document.querySelector(".modal-form");
+const checkBox = document.querySelector(".modal-checkbox");
 
 form.addEventListener("submit", formHandler);
 
 function formHandler(event) {
   event.preventDefault();
+
   const userName = event.target.elements.username.value;
   const userNumber = event.target.elements.usertel.value;
   const userEmail = event.target.elements.useremail.value;
+  const userPrivacyCheckbox = event.target.elements.userPrivacy.checked;
 
-  if (userName === "" || userNumber === "" || userEmail === "") {
+  console.log(userPrivacyCheckbox);
+
+  if (
+    userName === "" ||
+    userNumber === "" ||
+    userEmail === "" ||
+    userPrivacyCheckbox === false
+  ) {
     return alert("Please fill all the filds!");
   }
-  userData.name = userName;
-  userData.number = userNumber;
-  userData.userEmail = userEmail;
 
   form.reset();
 }
-
-const userData = {};
-
-console.log(userData.name);
